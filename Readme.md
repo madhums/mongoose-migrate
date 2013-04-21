@@ -18,9 +18,13 @@ mongoose-migrate needs an env variable `NODE_MONGOOSE_MIGRATIONS_CONFIG` which p
 ```js
 // Path : ./config/migrations.js
 {
-  "schema": { "migration": {} },
-  "modelName": "Migration",
-  "db": "mongodb://localhost/dbname"
+  "development": {
+    "schema": { "migration": {} },
+    "modelName": "Migration",
+    "db": "mongodb://localhost/db_development"
+  },
+  "test": { ... },
+  "production": { ... }
 }
 ```
 
