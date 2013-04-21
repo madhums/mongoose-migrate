@@ -7,7 +7,7 @@
   , "contributors": [
       { "name": "Madhusudhan Srinivasa", "email": "madhums8@gmail.com" }
     ]
-  , "repository": "git://github.com/visionmedia/node-migrate"
+  , "repository": "git://github.com/madhums/mongoose-migrate"
   , "bin": { "mongoose-migrate": "./bin/migrate" }
   , "dependencies" : {
       "mongoose": "latest"
