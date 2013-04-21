@@ -27,7 +27,7 @@ mongoose-migrate needs an env variable `NODE_MONGOOSE_MIGRATIONS_CONFIG` which p
 and then run the migrate command
 
 ```sh
-$ NODE_MONGOOSE_MIGRATIONS_CONFIG=./config/migrations.js migrate
+$ NODE_MONGOOSE_MIGRATIONS_CONFIG=./config/migrations.js mongoose-migrate
 ```
 
 I created this fork because everytime I used to deploy to heroku, it used to deploy in a different folder and the `.migrate` file was not available anymore.
