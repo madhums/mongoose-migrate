@@ -1,5 +1,40 @@
 
-# migrate
+## Mongoose migrate
+
+Fork of [visionmedia/node-migrate](https://github.com/visionmedia/node-migrate). Keeps track of the migrations in a mongodb collection instead of `.migrate` file.
+
+## Installation
+
+```sh
+$ npm install mongoose-migrate -g
+```
+
+or include it in `package.json`
+
+## Usage
+
+mongoose-migrate needs an env variable `NODE_MONGOOSE_MIGRATIONS_CONFIG` which points to the path of the config file. The config file should contain
+
+```js
+// Path : ./config/migrations.js
+{
+  "schema": { "migration": {} },
+  "modelName": "Migration",
+  "db": "mongodb://localhost/dbname"
+}
+```
+
+and then run the migrate command
+
+```sh
+$ NODE_MONGOOSE_MIGRATIONS_CONFIG=./config/migrations.js migrate
+```
+
+I created this fork because everytime I used to deploy to heroku, it used to deploy in a different folder and the `.migrate` file was not available anymore.
+
+---
+
+# node migrate
 
   Abstract migration framework for node
 
@@ -108,7 +143,7 @@ This will run up-migrations upto (and including) `002-coolest-pet.js`. Similarly
       down : migrations/001-add-jane.js
       migration : complete
 
-## License 
+## License
 
 (The MIT License)
 
