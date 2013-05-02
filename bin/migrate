@@ -172,7 +172,7 @@ var commands = {
 
     var curr = pad((migrations.pop() || 0) + 1)
       , title = slugify([].slice.call(arguments).join(' '));
-    title = title ? curr + '-' + title : curr; 
+    title = title ? curr + '-' + title : curr;
     create(title);
   }
 };
@@ -195,6 +195,7 @@ function pad(n) {
  */
 
 function create(name) {
+  cwd = cwd || process.cwd();
   var path = 'migrations/' + name + '.js';
   log('create', join(cwd, path));
   fs.writeFileSync(path, template);
@@ -227,7 +228,7 @@ function performMigration(direction, migrationName) {
   var migrationPath = migrationName
     ? join('migrations', migrationName)
     : migrationName;
- 
+
   set[direction](null, migrationPath);
 }
 
