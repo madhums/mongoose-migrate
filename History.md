@@ -2,6 +2,11 @@
 0.2.0 / 2014-10-01
 ==================
 
+  * Exit when there are no migrations to run
+
+0.2.0 / 2014-10-01
+==================
+
   * change the way config file is read, use `require` to load the file
     - This way allow `module.exports` in the config file
 
