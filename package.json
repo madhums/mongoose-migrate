@@ -1,20 +1,24 @@
 {
-    "name": "mongoose-migrate"
-  , "version": "0.1.5"
-  , "description": "Abstract migration framework for node"
-  , "keywords": ["migrate", "migrations", "mongoose"]
-  , "author": "TJ Holowaychuk <tj@vision-media.ca>"
-  , "contributors": [
-      { "name": "Madhusudhan Srinivasa", "email": "madhums8@gmail.com" }
-    ]
-  , "repository": "git://github.com/madhums/mongoose-migrate"
-  , "bin": { "mongoose-migrate": "./bin/migrate" }
-  , "dependencies" : {
-      "mongoose": "3.8.x"
-    }
-  , "devDependencies": {
+  "name": "mongoose-migrate",
+  "version": "0.2.0",
+  "description": "Abstract migration framework for node",
+  "keywords": [
+    "migrate",
+    "migrations",
+    "mongoose"
+  ],
+  "author": "TJ Holowaychuk <tj@vision-media.ca>",
+  "contributors": [
+    { "name": "Madhusudhan Srinivasa", "email": "madhums8@gmail.com" }
+  ],
+  "repository": "git://github.com/madhums/mongoose-migrate",
+  "bin": { "mongoose-migrate": "./bin/migrate" },
+  "dependencies" : {
+    "mongoose": "3.8.x"
+  },
+  "devDependencies": {
     "should": ">= 0.0.1"
-    }
-  , "main": "index"
-  , "engines": { "node": ">= 0.4.x" }
+  },
+  "main": "index",
+  "engines": { "node": ">= 0.8.x" }
 }
