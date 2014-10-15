@@ -174,6 +174,7 @@ var commands = {
       , title = slugify([].slice.call(arguments).join(' '));
     title = title ? curr + '-' + title : curr;
     create(title);
+    process.exit();
   }
 };
 
