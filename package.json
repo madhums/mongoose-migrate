@@ -1,6 +1,6 @@
 {
   "name": "mongoose-migrate",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Abstract migration framework for node",
   "keywords": [
     "migrate",
