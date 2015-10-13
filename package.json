@@ -1,6 +1,6 @@
 {
   "name": "mongoose-migrate",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Abstract migration framework for node",
   "keywords": [
     "migrate",
@@ -14,7 +14,7 @@
   "repository": "git://github.com/madhums/mongoose-migrate",
   "bin": { "mongoose-migrate": "./bin/migrate" },
   "dependencies" : {
-    "mongoose": "3.8.x"
+    "mongoose": "4.1.x"
   },
   "devDependencies": {
     "should": ">= 0.0.1"
