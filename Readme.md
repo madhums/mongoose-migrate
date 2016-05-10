@@ -21,12 +21,14 @@ module.exports = {
   development: {
     schema: { 'migration': {} },
     modelName: 'Migration',
-    db: process.env.MONGOHQ_URL || 'mongodb://localhost/app_development'
+    db: process.env.MONGOHQ_URL || 'mongodb://localhost/app_development',
+    dbOptions: { ... }
   },
   test: { ... },
   production: { ... }
 }
 ```
+> `dbOptions` is an optional argument for `mongoose.connect`
 
 and then run the migrate command
 
