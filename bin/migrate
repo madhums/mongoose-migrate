@@ -43,6 +43,7 @@ var usage = [
   , '     down   [name]    migrate down till given migration'
   , '     up     [name]    migrate up till given migration (the default command)'
   , '     create [title]   create a new migration file with optional [title]'
+  , '     force  [name]    set the current migration state without running up/down'
   , ''
 ].join('\n');
 
@@ -175,6 +176,14 @@ var commands = {
     title = title ? curr + '-' + title : curr;
     create(title);
     process.exit();
+  },
+
+  /**
+   * force [name]
+   */
+
+  force: function(migrationName){
+    performMigration('up', migrationName, true);
   }
 };
 
@@ -208,7 +217,7 @@ function create(name) {
  * @param {Number} direction
  */
 
-function performMigration(direction, migrationName) {
+function performMigration(direction, migrationName, force) {
   migrate('migrations/.migrate');
   var all = migrations();
   all.forEach(function(path){
@@ -219,6 +228,10 @@ function performMigration(direction, migrationName) {
   if (!all.length) process.exit();
 
   var set = migrate();
+
+  if (force) {
+    set.force = true;
+  }
 
   set.on('migration', function(migration, direction){
     log(direction, migration.title);
